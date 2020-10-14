@@ -1,7 +1,8 @@
-package edu.cnm.deepdive.galaxyraiders;
+package edu.cnm.deepdive.galaxyraiders.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import edu.cnm.deepdive.galaxyraiders.R;
 
 public class MainActivity extends AppCompatActivity {
 
