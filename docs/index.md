@@ -69,9 +69,6 @@
 
 A stretched goal would possibly be adding different types of weapons to the game. Having to program the different physics of each weapon could possibly be very time consuming and adding too many could be a problem. Sharing to social media may also be a stretch goal. Possible enhancements could include more obstacles during the campaign. I.E. asteroids to dodge to stay alive.
 
-## [Wireframe](img/androidwireframe2.png)
+## [Wireframe](wireframe.md)
 
-![Wireframe diagram](img/androidwireframe2.png) 
-
-## [Entity Relationship Diagram](img/erd.png)
-![ERD](img/erd.png)
+## [Entity Relationship Diagram](erd.md)
