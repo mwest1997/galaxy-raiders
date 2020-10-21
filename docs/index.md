@@ -58,6 +58,13 @@ The user will have to sign in upon opening the game for the first time. Users ar
 	
 	* You will still be able to use the app if the service is inaccessible.
 
+* Usage of Google Sign-in to store user data between devices
+
+	*[Google Sign-in API](https://developers.google.com/identity/sign-in/web/sign-in)
+	
+	* The app will use the google sign-in API to store saved data across multiple devices.
+	
+	* I would assume that the app would still be accessible without access to this service, and just be able to store data on the phone, but only for one user.
 ## Stretch goals/possible enhancements 
 
 A stretched goal would possibly be adding different types of weapons to the game. Having to program the different physics of each weapon could possibly be very time consuming and adding too many could be a problem. Sharing to social media may also be a stretch goal. Possible enhancements could include more obstacles during the campaign. I.E. asteroids to dodge to stay alive.
