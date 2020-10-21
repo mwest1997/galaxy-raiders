@@ -72,4 +72,6 @@ A stretched goal would possibly be adding different types of weapons to the game
 ## Wireframe
 
 ![Wireframe diagram](img/androidwireframe2.png) 
+
+## Entity Relationship Diagram
 ![ERD](img/erd.png)
