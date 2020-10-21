@@ -60,7 +60,7 @@ The user will have to sign in upon opening the game for the first time. Users ar
 
 * Usage of Google Sign-in to store user data between devices
 
-	*[Google Sign-in API](https://developers.google.com/identity/sign-in/web/sign-in)
+	* [Google Sign-in API](https://developers.google.com/identity/sign-in/web/sign-in)
 	
 	* The app will use the google sign-in API to store saved data across multiple devices.
 	
