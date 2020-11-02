@@ -7,6 +7,8 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
+import androidx.room.TypeConverters;
 import java.util.Date;
 
 @Entity(
@@ -15,7 +17,7 @@ import java.util.Date;
     },
     foreignKeys = {
         @ForeignKey(
-            entity = Match.class,
+            entity = User.class,
             parentColumns = {"user_id"}, childColumns = {"user_id"}
         )
     }
@@ -34,16 +36,18 @@ public class Game {
   @ColumnInfo(name = "weapon_type")
   private int weaponType;
 
-  @ColumnInfo(name = "user_id")
+  @ColumnInfo(name = "user_id", index = true)
   private long id;
 
-  @ColumnInfo(index = true)
   private Integer score;
 
   @NonNull
   private Date created;
 
   private boolean completed;
+
+  @ColumnInfo(name = "game_mode")
+  private GameMode gameMode;
 
   public int getCustomisationId() {
     return customisationId;
@@ -102,6 +106,27 @@ public class Game {
     this.completed = completed;
   }
 
-  private Enum mode;
+  public GameMode getGameMode() {
+    return gameMode;
+  }
+
+  public void setGameMode(GameMode gameMode) {
+    this.gameMode = gameMode;
+  }
+
+  public enum GameMode {
+    CAMPAIGN, SURVIVAL;
+
+    @TypeConverter
+    public static Integer gameModeToInt(GameMode value) {
+      return (value != null ? value.ordinal() : null);
+    }
+
+    @TypeConverter
+    public static GameMode intToGameMode(Integer value) {
+      return (value != null ? GameMode.values()[value] : null);
+    }
+
+  }
 
 }
