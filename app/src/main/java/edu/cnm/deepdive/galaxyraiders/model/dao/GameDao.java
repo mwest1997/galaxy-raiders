@@ -1,9 +1,13 @@
 package edu.cnm.deepdive.galaxyraiders.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Transaction;
 import edu.cnm.deepdive.galaxyraiders.model.entity.Game;
+import edu.cnm.deepdive.galaxyraiders.model.pojo.GameWithUser;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -29,5 +33,11 @@ public interface GameDao {
   @Delete
   Single<Integer> delete(Collection<Game> games);
 
+  @Transaction
+  @Query("SELECT * FROM Game ORDER BY score DESC LIMIT :limit")
+  LiveData<List<GameWithUser>> getHighScores(int limit);
+
+  @Query("SELECT * FROM Game WHERE game_id = :gameId")
+  LiveData<Game> getById(long gameId);
 
 }

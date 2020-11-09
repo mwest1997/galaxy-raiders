@@ -1,6 +1,5 @@
 package edu.cnm.deepdive.galaxyraiders.model.entity;
 
-import android.service.autofill.FieldClassification.Match;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -8,7 +7,6 @@ import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverter;
-import androidx.room.TypeConverters;
 import java.util.Date;
 
 @Entity(
@@ -25,8 +23,8 @@ import java.util.Date;
 public class Game {
 
   @PrimaryKey(autoGenerate = true)
-  @ColumnInfo(name = "custom_id")
-  private int customisationId;
+  @ColumnInfo(name = "game_id")
+  private int gameId;
 
   @NonNull
   @ColumnInfo(name = "ship_type")
@@ -37,9 +35,9 @@ public class Game {
   private int weaponType;
 
   @ColumnInfo(name = "user_id", index = true)
-  private long id;
+  private long userId;
 
-  private Integer score;
+  private int score;
 
   @NonNull
   private Date created;
@@ -49,12 +47,12 @@ public class Game {
   @ColumnInfo(name = "game_mode")
   private GameMode gameMode;
 
-  public int getCustomisationId() {
-    return customisationId;
+  public int getGameId() {
+    return gameId;
   }
 
-  public void setCustomisationId(int customisationId) {
-    this.customisationId = customisationId;
+  public void setGameId(int gameId) {
+    this.gameId = gameId;
   }
 
   public int getShipType() {
@@ -73,19 +71,19 @@ public class Game {
     this.weaponType = weaponType;
   }
 
-  public long getId() {
-    return id;
+  public long getUserId() {
+    return userId;
   }
 
-  public void setId(long id) {
-    this.id = id;
+  public void setUserId(long userId) {
+    this.userId = userId;
   }
 
-  public Integer getScore() {
+  public int getScore() {
     return score;
   }
 
-  public void setScore(Integer score) {
+  public void setScore(int score) {
     this.score = score;
   }
 

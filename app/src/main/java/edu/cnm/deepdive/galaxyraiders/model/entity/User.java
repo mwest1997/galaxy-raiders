@@ -7,7 +7,11 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
-@Entity
+@Entity(
+    indices = {
+        @Index(value = {"oauth_key"}, unique = true)
+    }
+)
 public class User {
 
   @PrimaryKey(autoGenerate = true)
@@ -15,6 +19,7 @@ public class User {
   private long id;
 
   @NonNull
+  @ColumnInfo(name = "oauth_key")
   private String oauthKey;
 
   @NonNull

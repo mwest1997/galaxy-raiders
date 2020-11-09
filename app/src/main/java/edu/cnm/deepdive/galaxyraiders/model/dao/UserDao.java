@@ -1,9 +1,14 @@
 package edu.cnm.deepdive.galaxyraiders.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Transaction;
 import edu.cnm.deepdive.galaxyraiders.model.entity.User;
+import edu.cnm.deepdive.galaxyraiders.model.pojo.UserWithGames;
+import io.reactivex.Maybe;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -28,5 +33,15 @@ public interface UserDao {
 
   @Delete
   Single<Integer> delete(Collection<User> users);
+
+  @Query("SELECT * FROM user WHERE user_id = :userId")
+  LiveData<User> getById(long userId);
+
+  @Transaction
+  @Query("SELECT * FROM user WHERE user_id = :userId")
+  LiveData<UserWithGames> getByIdWithGames(long userId);
+
+  @Query("SELECT * FROM User WHERE oauth_key = :oauthKey")
+  Maybe<User> getByOauthKey(String oauthKey);
 
 }
