@@ -72,3 +72,5 @@ A stretched goal would possibly be adding different types of weapons to the game
 ## [Wireframe](wireframe.md)
 
 ## [Entity Relationship Diagram](erd.md)
+
+## [Galaxy Raiders DDL](ddl.md)

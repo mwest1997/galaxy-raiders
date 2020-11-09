@@ -24,7 +24,7 @@ public class Game {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "game_id")
-  private int gameId;
+  private long gameId;
 
   @NonNull
   @ColumnInfo(name = "ship_type")
@@ -47,11 +47,11 @@ public class Game {
   @ColumnInfo(name = "game_mode")
   private GameMode gameMode;
 
-  public int getGameId() {
+  public long getGameId() {
     return gameId;
   }
 
-  public void setGameId(int gameId) {
+  public void setGameId(long gameId) {
     this.gameId = gameId;
   }
 

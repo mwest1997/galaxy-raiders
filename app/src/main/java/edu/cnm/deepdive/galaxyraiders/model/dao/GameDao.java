@@ -6,6 +6,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Transaction;
+import androidx.room.Update;
 import edu.cnm.deepdive.galaxyraiders.model.entity.Game;
 import edu.cnm.deepdive.galaxyraiders.model.pojo.GameWithUser;
 import io.reactivex.Single;
@@ -32,6 +33,15 @@ public interface GameDao {
 
   @Delete
   Single<Integer> delete(Collection<Game> games);
+
+  @Update
+  Single<Integer> update(Game game);
+
+  @Update
+  Single<Integer> update(Game... games);
+
+  @Update
+  Single<Integer> update(Collection<Game> games);
 
   @Transaction
   @Query("SELECT * FROM Game ORDER BY score DESC LIMIT :limit")

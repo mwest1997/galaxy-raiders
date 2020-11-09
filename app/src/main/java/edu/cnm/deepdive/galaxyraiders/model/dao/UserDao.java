@@ -6,6 +6,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Transaction;
+import androidx.room.Update;
 import edu.cnm.deepdive.galaxyraiders.model.entity.User;
 import edu.cnm.deepdive.galaxyraiders.model.pojo.UserWithGames;
 import io.reactivex.Maybe;
@@ -33,6 +34,15 @@ public interface UserDao {
 
   @Delete
   Single<Integer> delete(Collection<User> users);
+
+  @Update
+  Single<Integer> update(User user);
+
+  @Update
+  Single<Integer> update(User... users);
+
+  @Update
+  Single<Integer> update(Collection<User> users);
 
   @Query("SELECT * FROM user WHERE user_id = :userId")
   LiveData<User> getById(long userId);

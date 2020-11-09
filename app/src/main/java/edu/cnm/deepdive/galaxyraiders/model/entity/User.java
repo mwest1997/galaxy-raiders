@@ -22,12 +22,11 @@ public class User {
   @ColumnInfo(name = "oauth_key")
   private String oauthKey;
 
-  @NonNull
   private int level;
 
   @NonNull
   @ColumnInfo(index = true)
-  private Date created;
+  private Date created = new Date();
 
   public long getId() {
     return id;

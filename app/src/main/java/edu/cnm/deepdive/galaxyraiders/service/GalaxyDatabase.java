@@ -2,6 +2,7 @@ package edu.cnm.deepdive.galaxyraiders.service;
 
 import android.app.Application;
 import androidx.room.Database;
+import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
@@ -24,9 +25,21 @@ public abstract class GalaxyDatabase extends RoomDatabase {
     GalaxyDatabase.context = context;
   }
 
+  public static GalaxyDatabase getInstance() {
+    return InstanceHolder.INSTANCE;
+  }
+
   public abstract GameDao getGameDao();
 
   public abstract UserDao getUserDao();
+
+  private static class InstanceHolder {
+
+    private static final GalaxyDatabase INSTANCE =
+        Room.databaseBuilder(context, GalaxyDatabase.class, DB_NAME)
+            .build();
+
+  }
 
   public static class Converters {
 
