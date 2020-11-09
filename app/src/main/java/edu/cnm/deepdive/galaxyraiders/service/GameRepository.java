@@ -1,9 +1,12 @@
 package edu.cnm.deepdive.galaxyraiders.service;
 
 import android.content.Context;
+import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.galaxyraiders.model.dao.GameDao;
 import edu.cnm.deepdive.galaxyraiders.model.entity.Game;
+import edu.cnm.deepdive.galaxyraiders.model.pojo.GameWithUser;
 import io.reactivex.Completable;
+import java.util.List;
 
 public class GameRepository {
   
@@ -32,5 +35,12 @@ public class GameRepository {
             .ignoreElement();
   }
 
+  LiveData<Game> getGameById(long gameId) {
+    return gameDao.getById(gameId);
+  }
+
+  LiveData<List<GameWithUser>> getHighScores(int limit) {
+    return gameDao.getHighScores(limit);
+  }
 
 }
