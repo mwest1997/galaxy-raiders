@@ -40,7 +40,7 @@
 
 * Possibly the ability to share high-scores to social media. 
 	
-	* https://www.facebook.com/
+	* [Facebook](https://www.facebook.com/)
 	
 	* The app will be able to take your most recent score, and post it on your FaceBook profile.
 	
@@ -48,11 +48,15 @@
 
 * Using the tilt function to make the ship move left or right
 
+    * [Android Gyroscope Sensor](https://source.android.com/devices/sensors/sensor-types#gyroscope)
+
 	* The app will be able to use the tilt function to make the ship steer to the left, as well as to the right depending on which way you tilt the phone. Left to go left, and right to go right!
 	
 	* You will not be able to use the app if the service is inaccessible. You may be able to launch the game, but its main functions would not be able to work.
 
 * Making the background a little darker if the lighting in the room is low, and brighter if the light is high.
+
+    * [Android Light Sensor](https://source.android.com/devices/sensors/sensor-types#light)
 
 	* The app will be able to use the light sensor to sense how much light exists within the room, and change the color of the background so that if you are playing in the dark, the game is not too bright and will not hurt your eyes.
 	
