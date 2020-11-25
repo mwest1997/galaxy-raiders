@@ -3,22 +3,29 @@
   xmlns:tools="http://schemas.android.com/tools"
   package="edu.cnm.deepdive.galaxyraiders">
 
-  <application
-    android:name=".GalaxyRaidersApplication"
-    android:allowBackup="false"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme"
-    tools:ignore="AllowBackup">
-    <activity android:name=".controller.MainActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
+    <application
+      android:allowBackup="false"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:name=".GalaxyRaidersApplication"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme"
+      tools:ignore="AllowBackup">
+        <activity android:name=".controller.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-        <category android:name="android.intent.category.LAUNCHER"/>
-      </intent-filter>
-    </activity>
-  </application>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+          android:label="@string/app_name"
+          android:name=".controller.NavigationActivity"
+          android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".controller.MainActivity">
+        </activity>
+    </application>
 
 </manifest>
