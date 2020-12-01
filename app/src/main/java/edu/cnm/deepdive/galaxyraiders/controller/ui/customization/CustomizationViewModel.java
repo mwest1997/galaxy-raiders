@@ -1,16 +1,16 @@
-package edu.cnm.deepdive.galaxyraiders.controller.ui.gallery;
+package edu.cnm.deepdive.galaxyraiders.controller.ui.customization;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class CustomizationViewModel extends ViewModel {
 
   private MutableLiveData<String> mText;
 
-  public GalleryViewModel() {
+  public CustomizationViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is gallery fragment");
+    mText.setValue(" ");
   }
 
   public LiveData<String> getText() {

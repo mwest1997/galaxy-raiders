@@ -5,10 +5,11 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".controller.ui.home.HomeFragment">
+  android:background="@color/colorPrimaryDark"
+  tools:context=".controller.ui.survival.SurvivalFragment">
 
   <TextView
-    android:id="@+id/text_home"
+    android:id="@+id/text_gallery"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
@@ -20,4 +21,18 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
+
+  <Button
+    android:id="@+id/start_button"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:text="@string/start"
+    android:textSize="40sp"
+    android:backgroundTint="@color/colorAccent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

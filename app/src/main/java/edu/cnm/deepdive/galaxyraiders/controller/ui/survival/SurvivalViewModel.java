@@ -1,16 +1,16 @@
-package edu.cnm.deepdive.galaxyraiders.controller.ui.home;
+package edu.cnm.deepdive.galaxyraiders.controller.ui.survival;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class SurvivalViewModel extends ViewModel {
 
   private MutableLiveData<String> mText;
 
-  public HomeViewModel() {
+  public SurvivalViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is home fragment");
+    mText.setValue(" ");
   }
 
   public LiveData<String> getText() {

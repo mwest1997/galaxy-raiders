@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.galaxyraiders.controller.ui.slideshow;
+package edu.cnm.deepdive.galaxyraiders.controller.ui.survival;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,17 +12,17 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import edu.cnm.deepdive.galaxyraiders.R;
 
-public class SlideshowFragment extends Fragment {
+public class SurvivalFragment extends Fragment {
 
-  private SlideshowViewModel slideshowViewModel;
+  private SurvivalViewModel survivalViewModel;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    slideshowViewModel =
-        ViewModelProviders.of(this).get(SlideshowViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-    final TextView textView = root.findViewById(R.id.text_slideshow);
-    slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    survivalViewModel =
+        ViewModelProviders.of(this).get(SurvivalViewModel.class);
+    View root = inflater.inflate(R.layout.fragment_survival, container, false);
+    final TextView textView = root.findViewById(R.id.text_gallery);
+    survivalViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);

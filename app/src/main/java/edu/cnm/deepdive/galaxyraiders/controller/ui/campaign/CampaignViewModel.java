@@ -1,16 +1,16 @@
-package edu.cnm.deepdive.galaxyraiders.controller.ui.slideshow;
+package edu.cnm.deepdive.galaxyraiders.controller.ui.campaign;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class CampaignViewModel extends ViewModel {
 
   private MutableLiveData<String> mText;
 
-  public SlideshowViewModel() {
+  public CampaignViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is slideshow fragment");
+    mText.setValue(" ");
   }
 
   public LiveData<String> getText() {

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorPrimaryDark"
+  tools:context=".controller.ui.customization.CustomizationFragment">
+
+  <TextView
+    android:id="@+id/text_customization"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:textAlignment="center"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/ships"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:text="@string/ships"
+    android:textSize="30sp"
+    android:textColor="@color/colorWhite"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_weight="7"/>
+  <TextView
+    android:id="@+id/weapons"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:text="@string/weapons"
+    android:textSize="30sp"
+    android:textColor="@color/colorWhite"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/ship4"
+    app:layout_constraintVertical_weight="3"/>
+
+  <ImageButton
+    android:id="@+id/ship1"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_ship_3"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/ships"
+
+
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/ship2"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_ship_2"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/ships"
+    app:layout_constraintStart_toEndOf="@id/ship1"
+
+
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/ship3"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_ship"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/ships"
+    app:layout_constraintStart_toEndOf="@id/ship2"
+
+
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/ship4"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_ship_4"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/ship1"
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/ship5"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_ship_5"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/ship1"
+    app:layout_constraintStart_toEndOf="@id/ship4"
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/ship6"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_ship_6"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/ship1"
+    app:layout_constraintStart_toEndOf="@id/ship5"
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/weapon1"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_weapon"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/weapons"
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/weapon2"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_weapon_2"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/weapons"
+    app:layout_constraintStart_toEndOf="@id/weapon1"
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/weapon3"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_weapon_3"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/weapons"
+    app:layout_constraintStart_toEndOf="@id/weapon2"
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/weapon4"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_weapon_4"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/weapon1"
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/weapon5"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_weapon_5"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/weapon1"
+    app:layout_constraintStart_toEndOf="@id/weapon4"
+    tools:ignore="MissingConstraints"/>
+
+  <ImageButton
+    android:id="@+id/weapon6"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_weapon_6"
+    android:backgroundTint="@color/colorPrimary"
+    app:layout_constraintTop_toBottomOf="@id/weapon1"
+    app:layout_constraintStart_toEndOf="@id/weapon5"
+    tools:ignore="MissingConstraints"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
