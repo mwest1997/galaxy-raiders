@@ -16,4 +16,5 @@
   <string name="ships">Ships</string>
   <string name="weapons">Weapons</string>
   <string name="start">Start</string>
+  <string name="title_settings">Settings</string>
 </resources>
