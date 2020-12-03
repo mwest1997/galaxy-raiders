@@ -1,0 +1,11 @@
+edu.cnm.deepdive.galaxyraiders
+edu.cnm.deepdive.galaxyraiders.controller
+edu.cnm.deepdive.galaxyraiders.controller.ui.campaign
+edu.cnm.deepdive.galaxyraiders.controller.ui.customization
+edu.cnm.deepdive.galaxyraiders.controller.ui.settings
+edu.cnm.deepdive.galaxyraiders.controller.ui.survival
+edu.cnm.deepdive.galaxyraiders.databinding
+edu.cnm.deepdive.galaxyraiders.model.dao
+edu.cnm.deepdive.galaxyraiders.model.entity
+edu.cnm.deepdive.galaxyraiders.model.pojo
+edu.cnm.deepdive.galaxyraiders.service
