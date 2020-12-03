@@ -84,3 +84,5 @@ A stretched goal would possibly be adding different types of weapons to the game
 ## [Database](database.md)
 
 ## [Repositories](repository.md)
+
+## [Javadoc](api/index.html)
