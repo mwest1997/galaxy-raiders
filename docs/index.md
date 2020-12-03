@@ -18,7 +18,7 @@
 
 * A campaign mode with different levels that progressively get harder.
 
-* The further you go, the more enemies come at you and the bigger they are, the more health they have.
+* The further you go, the more enemies come at you, and the bigger they are, the more health they have.
 
 * The final level will have a boss that has a lot of health and sends other enemies at you.
 
