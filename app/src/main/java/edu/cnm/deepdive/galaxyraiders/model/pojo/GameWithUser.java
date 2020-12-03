@@ -4,6 +4,9 @@ import androidx.room.Relation;
 import edu.cnm.deepdive.galaxyraiders.model.entity.Game;
 import edu.cnm.deepdive.galaxyraiders.model.entity.User;
 
+/**
+ * Pojo for games with their users.
+ */
 public class GameWithUser extends Game {
 
   @Relation(
@@ -13,10 +16,16 @@ public class GameWithUser extends Game {
   )
   private User user;
 
+  /**
+   * Gets the current {@link User}.
+   */
   public User getUser() {
     return user;
   }
 
+  /**
+   * Sets the current {@link User}
+   */
   public void setUser(User user) {
     this.user = user;
   }

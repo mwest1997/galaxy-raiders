@@ -12,6 +12,9 @@ import com.google.android.gms.tasks.Task;
 import edu.cnm.deepdive.galaxyraiders.BuildConfig;
 import io.reactivex.Single;
 
+/**
+ * Creates the opportunity to use Google Sign-in upon launch of the app.
+ */
 public class GoogleSignInService {
 
   private static Application context;
@@ -30,18 +33,31 @@ public class GoogleSignInService {
     client = GoogleSignIn.getClient(context, options);
   }
 
+  /**
+   * Sets the context.
+   */
   public static void setContext(Application context) {
     GoogleSignInService.context = context;
   }
 
+  /**
+   * Gets the instance.
+   */
   public static GoogleSignInService getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   * Gets the current account.
+   */
   public GoogleSignInAccount getAccount() {
     return account;
   }
 
+  /**
+   * Refreshes the accounts available.
+   * @return Returns the Single of an account.
+   */
   public Single<GoogleSignInAccount> refresh() {
     return Single.create((emitter) ->
         client.silentSignIn()
@@ -51,12 +67,22 @@ public class GoogleSignInService {
     );
   }
 
+  /**
+   * Starts the sign-in process.
+   * @param activity The activity of Google Sign-in.
+   * @param requestCode Requests the code.
+   */
   public void startSignIn(Activity activity, int requestCode) {
     account = null;
     Intent intent = client.getSignInIntent();
     activity.startActivityForResult(intent, requestCode);
   }
 
+  /**
+   * Completes the sign-in process.
+   * @param data The data within the Google account.
+   * @return Returns the task.
+   */
   public Task<GoogleSignInAccount> completeSignIn(Intent data) {
     Task<GoogleSignInAccount> task = null;
     try {
@@ -68,6 +94,10 @@ public class GoogleSignInService {
     return task;
   }
 
+  /**
+   * Creates the ability to sign out of the current Google account.
+   * @return Returns signOut.
+   */
   public Task<Void> signOut() {
     return client.signOut()
         .addOnCompleteListener((ignored) -> setAccount(null));

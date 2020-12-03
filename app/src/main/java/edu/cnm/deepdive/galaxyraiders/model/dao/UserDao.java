@@ -15,6 +15,9 @@ import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Manages the connection with the user data source.
+ */
 @Dao
 public interface UserDao {
 

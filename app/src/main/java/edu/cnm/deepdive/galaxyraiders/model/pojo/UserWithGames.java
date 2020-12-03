@@ -5,6 +5,9 @@ import edu.cnm.deepdive.galaxyraiders.model.entity.Game;
 import edu.cnm.deepdive.galaxyraiders.model.entity.User;
 import java.util.List;
 
+/**
+ * Pojo for Users with their games.
+ */
 public class UserWithGames extends User {
 
   @Relation(
@@ -14,10 +17,16 @@ public class UserWithGames extends User {
   )
   private List<Game> games;
 
+  /**
+   * Gets the current {@link Game}.
+   */
   public List<Game> getGames() {
     return games;
   }
 
+  /**
+   * Sets the current {@link Game}.
+   */
   public void setGames(List<Game> games) {
     this.games = games;
   }

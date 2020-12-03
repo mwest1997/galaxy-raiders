@@ -9,204 +9,132 @@
   tools:context=".controller.ui.customization.CustomizationFragment">
 
   <TextView
-    android:id="@+id/text_customization"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
-    android:textAlignment="center"
-    android:textSize="20sp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
-
-  <TextView
     android:id="@+id/ships"
-    android:layout_width="0dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
+    android:layout_margin="8dp"
     android:text="@string/ships"
     android:textSize="30sp"
     android:textColor="@color/colorWhite"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/weapons"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_weight="7"/>
+    app:layout_constraintTop_toTopOf="parent"/>
   <TextView
     android:id="@+id/weapons"
-    android:layout_width="0dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="32dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
+    android:layout_margin="8dp"
     android:text="@string/weapons"
     android:textSize="30sp"
     android:textColor="@color/colorWhite"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/ship4"
-    app:layout_constraintVertical_weight="3"/>
+    app:layout_constraintStart_toEndOf="@id/ships"
+    app:layout_constraintTop_toTopOf="parent"/>
 
-  <ImageButton
-    android:id="@+id/ship1"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_ship_3"
-    android:backgroundTint="@color/colorPrimary"
+  <RadioGroup
+    android:id="@+id/ship_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:checkedButton="@id/ship1"
+    android:gravity="center_horizontal"
     app:layout_constraintTop_toBottomOf="@id/ships"
+    app:layout_constraintStart_toStartOf="@id/ships"
+    app:layout_constraintEnd_toEndOf="@id/ships">
 
+    <RadioButton
+      android:id="@+id/ship1"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/ship_1_states"/>
 
-    tools:ignore="MissingConstraints"/>
+    <RadioButton
+      android:id="@+id/ship2"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/ship_2_states"/>
 
-  <ImageButton
-    android:id="@+id/ship2"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_ship_2"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/ships"
-    app:layout_constraintStart_toEndOf="@id/ship1"
+    <RadioButton
+      android:id="@+id/ship3"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/ship_3_states"/>
 
+    <RadioButton
+      android:id="@+id/ship4"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/ship_4_states"/>
 
-    tools:ignore="MissingConstraints"/>
+    <RadioButton
+      android:id="@+id/ship5"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/ship_5_states"/>
 
-  <ImageButton
-    android:id="@+id/ship3"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_ship"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/ships"
-    app:layout_constraintStart_toEndOf="@id/ship2"
+    <RadioButton
+      android:id="@+id/ship6"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/ship_6_states"/>
+  </RadioGroup>
 
-
-    tools:ignore="MissingConstraints"/>
-
-  <ImageButton
-    android:id="@+id/ship4"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_ship_4"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/ship1"
-    tools:ignore="MissingConstraints"/>
-
-  <ImageButton
-    android:id="@+id/ship5"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_ship_5"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/ship1"
-    app:layout_constraintStart_toEndOf="@id/ship4"
-    tools:ignore="MissingConstraints"/>
-
-  <ImageButton
-    android:id="@+id/ship6"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_ship_6"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/ship1"
-    app:layout_constraintStart_toEndOf="@id/ship5"
-    tools:ignore="MissingConstraints"/>
-
-  <ImageButton
-    android:id="@+id/weapon1"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_weapon"
-    android:backgroundTint="@color/colorPrimary"
+  <RadioGroup
+    android:id="@+id/weapon_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:checkedButton="@id/weapon1"
+    android:gravity="center_horizontal"
     app:layout_constraintTop_toBottomOf="@id/weapons"
-    tools:ignore="MissingConstraints"/>
+    app:layout_constraintStart_toStartOf="@id/weapons"
+    app:layout_constraintEnd_toEndOf="@id/weapons">
 
-  <ImageButton
-    android:id="@+id/weapon2"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_weapon_2"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/weapons"
-    app:layout_constraintStart_toEndOf="@id/weapon1"
-    tools:ignore="MissingConstraints"/>
+    <RadioButton
+      android:id="@+id/weapon1"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/weapon_1_states"/>
 
-  <ImageButton
-    android:id="@+id/weapon3"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_weapon_3"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/weapons"
-    app:layout_constraintStart_toEndOf="@id/weapon2"
-    tools:ignore="MissingConstraints"/>
+    <RadioButton
+      android:id="@+id/weapon2"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/weapon_2_states"/>
 
-  <ImageButton
-    android:id="@+id/weapon4"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_weapon_4"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/weapon1"
-    tools:ignore="MissingConstraints"/>
+    <RadioButton
+      android:id="@+id/weapon3"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/weapon_3_states"/>
 
-  <ImageButton
-    android:id="@+id/weapon5"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_weapon_5"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/weapon1"
-    app:layout_constraintStart_toEndOf="@id/weapon4"
-    tools:ignore="MissingConstraints"/>
+    <RadioButton
+      android:id="@+id/weapon4"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/weapon_4_states"/>
 
-  <ImageButton
-    android:id="@+id/weapon6"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:src="@drawable/ic_weapon_6"
-    android:backgroundTint="@color/colorPrimary"
-    app:layout_constraintTop_toBottomOf="@id/weapon1"
-    app:layout_constraintStart_toEndOf="@id/weapon5"
-    tools:ignore="MissingConstraints"/>
+    <RadioButton
+      android:id="@+id/weapon5"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/weapon_5_states"/>
+
+    <RadioButton
+      android:id="@+id/weapon6"
+      android:layout_width="@dimen/radio_button_size"
+      android:layout_height="@dimen/radio_button_size"
+      android:layout_margin="8dp"
+      android:button="@drawable/weapon_6_states"/>
+  </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

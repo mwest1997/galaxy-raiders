@@ -12,10 +12,20 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import edu.cnm.deepdive.galaxyraiders.R;
 
+/**
+ *  Connects the campaign layout to the campaign functionality.
+ */
 public class CampaignFragment extends Fragment {
 
   private CampaignViewModel campaignViewModel;
 
+  /**
+   * Calls the campaign fragment UI.
+   * @param inflater Used to uncompress data.
+   * @param container A view of a collection.
+   * @param savedInstanceState Saves the instance.
+   * @return Returns the root.
+   */
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
     campaignViewModel =

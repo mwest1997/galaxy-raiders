@@ -13,6 +13,9 @@ import edu.cnm.deepdive.galaxyraiders.databinding.ActivityLoginBinding;
 import edu.cnm.deepdive.galaxyraiders.service.GoogleSignInService;
 import edu.cnm.deepdive.galaxyraiders.service.UserRepository;
 
+/**
+ * Shows the activity of Google Sign-in upon launch of the app.
+ */
 public class LoginActivity extends AppCompatActivity {
 
   private static final int LOGIN_REQUEST_CODE = 1000;

@@ -13,6 +13,9 @@ import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Manages the connection with the game data source.
+ */
 @Dao
 public interface GameDao {
 

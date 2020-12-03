@@ -8,18 +8,29 @@ import edu.cnm.deepdive.galaxyraiders.model.pojo.GameWithUser;
 import io.reactivex.Completable;
 import java.util.List;
 
+/**
+ * The repository for games.
+ */
 public class GameRepository {
   
   private final Context context;
   
   private final GameDao gameDao;
 
-
+  /**
+   * Context of the {@link GameRepository}
+   * @param context context of this repository.
+   */
   public GameRepository(Context context) {
     this.context = context;
     gameDao = GalaxyDatabase.getInstance().getGameDao();
   }
 
+  /**
+   * Saves the current game.
+   * @param game Reference to the {@link Game}.
+   * @return Returns game id.
+   */
   public Completable save(Game game) {
     return (game.getGameId() == 0)
         ? gameDao.insert(game)
@@ -28,6 +39,12 @@ public class GameRepository {
         : gameDao.update(game)
             .ignoreElement();
   }
+
+  /**
+   * Deletes the current game.
+   * @param game Reference to the {@link Game}
+   * @return Returns game id.
+   */
   public Completable delete(Game game) {
     return (game.getGameId() == 0)
         ? Completable.complete()

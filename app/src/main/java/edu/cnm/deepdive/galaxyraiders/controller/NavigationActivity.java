@@ -16,6 +16,9 @@ import edu.cnm.deepdive.galaxyraiders.R;
 import edu.cnm.deepdive.galaxyraiders.databinding.ActivityNavigationBinding;
 import edu.cnm.deepdive.galaxyraiders.service.GoogleSignInService;
 
+/**
+ * Shows the activity used to navigate through the app I.E. the navigation drawer.
+ */
 public class NavigationActivity extends AppCompatActivity {
 
   private ActivityNavigationBinding binding;
@@ -44,6 +47,11 @@ public class NavigationActivity extends AppCompatActivity {
     NavigationUI.setupWithNavController(binding.navView, navController);
   }
 
+  /**
+   * Dictates what happens after menu items are created.
+   * @param menu The way to select different screens.
+   * @return Returns true.
+   */
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
@@ -51,6 +59,11 @@ public class NavigationActivity extends AppCompatActivity {
     return true;
   }
 
+  /**
+   * Dictates what happens once you select a menu item.
+   * @param item An option in the menu.
+   * @return Returns handled.
+   */
   @Override
   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
     boolean handled = true;
@@ -65,6 +78,10 @@ public class NavigationActivity extends AppCompatActivity {
     return handled;
   }
 
+  /**
+   * Used when a user chooses to navigate up within the action bar.
+   * @return Returns navigation UI.
+   */
   @Override
   public boolean onSupportNavigateUp() {
     NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

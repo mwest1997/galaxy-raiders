@@ -13,6 +13,9 @@ import edu.cnm.deepdive.galaxyraiders.model.entity.User;
 import edu.cnm.deepdive.galaxyraiders.service.GalaxyDatabase.Converters;
 import java.util.Date;
 
+/**
+ * An instance of the database of the app.
+ */
 @Database(entities = {User.class, Game.class}, version = 1)
 @TypeConverters({Converters.class, Game.GameMode.class})
 public abstract class GalaxyDatabase extends RoomDatabase {
@@ -21,16 +24,28 @@ public abstract class GalaxyDatabase extends RoomDatabase {
 
   private static Application context;
 
+  /**
+   * Sets the context.
+   */
   public static void setContext(Application context) {
     GalaxyDatabase.context = context;
   }
 
+  /**
+   * Gets the instance.
+   */
   public static GalaxyDatabase getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   * Gets the {@link GameDao}
+   */
   public abstract GameDao getGameDao();
 
+  /**
+   * Gets the {@link UserDao}
+   */
   public abstract UserDao getUserDao();
 
   private static class InstanceHolder {
@@ -41,13 +56,26 @@ public abstract class GalaxyDatabase extends RoomDatabase {
 
   }
 
+  /**
+   * Converts dates and longs.
+   */
   public static class Converters {
 
+    /**
+     * Converts a date to a Long.
+     * @param created The date created.
+     * @return Returns the created time.
+     */
     @TypeConverter
     public static Long dateToLong(Date created) {
       return (created != null) ? created.getTime() : null;
     }
 
+    /**
+     * Converts a Long to date.
+     * @param created The Long created.
+     * @return Returns the date created.
+     */
     @TypeConverter
     public static Date longToDate(Long created) {
       return (created != null) ? new Date(created) : null;
