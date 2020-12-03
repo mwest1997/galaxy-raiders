@@ -1,6 +1,6 @@
 ## Summary
 
-  The android app that I will developing is based on the game Space Invaders. But instead of just having the regular game, there will be multiple levels each with different tasks at hand to complete to be able to unlock different ships and weapons. The ships will have no advantage over others, purely cosmetic. The weapons will be upradeable by completing seperate tasks to help the player defeat the massive hoards of enemies.
+  The android app that I will developing is based on the game Space Invaders. But instead of just having the regular game, there will be multiple levels each with different tasks at hand to complete to be able to unlock different ships and weapons. The ships will have no advantage over others, purely cosmetic. The weapons will be upgradeable by completing separate tasks to help the player defeat the massive hoards of enemies.
 
   The user will have to sign in upon opening the game for the first time. Users are asked to sign in so that all of their stats can be saved in between sessions. Things that will be saved for the users will include their high score, the ship and weapon they are currently using, as well as the level they are currently on in the campaign mode. It is also used so that there is an option for multiple users to be able to play on the same device at different times. The user will then be met by the home screen, which will be themed to fit the game. From here, they will be able to choose between the campaign mode and the survival mode. Campaign will be a story based mode which will have multiple levels for the user to complete. Survival mode is an infinite singular level where the user just tries to get a high score based on the amount of enemies defeated. Meanwhile, back on the homescreen, the user can go into the settings and change the ship as well as the weapons based on their own preferences. Compete with your friends to see who has the highest score!
 
@@ -27,6 +27,22 @@
 * Ships and weapons that can be unlocked during the game by performing tasks.
 
 * Weapons will have different uses for different situations.
+
+## Current State
+
+  Currently, the app builds and runs, but does not do much. It has multiple screens with different buttons all with a specific purpose but most buttons do not have a role yet. The game does not play yet due to time restrictions and making animations work.
+
+### Not functional
+  
+* The game itself
+
+* Buttons having no functionality
+
+* Database returning games
+
+### Stretch Goals
+
+* Implementing the campaign mode because survival seems to be an easier approach to having a running game 
 
 ## Persistent data
 
