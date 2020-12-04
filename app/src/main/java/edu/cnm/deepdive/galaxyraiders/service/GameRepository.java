@@ -6,6 +6,8 @@ import edu.cnm.deepdive.galaxyraiders.model.dao.GameDao;
 import edu.cnm.deepdive.galaxyraiders.model.entity.Game;
 import edu.cnm.deepdive.galaxyraiders.model.pojo.GameWithUser;
 import io.reactivex.Completable;
+import io.reactivex.Single;
+import io.reactivex.schedulers.Schedulers;
 import java.util.List;
 
 /**
